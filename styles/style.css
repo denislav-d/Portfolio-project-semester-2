@@ -27,56 +27,8 @@ body {
   overflow: hidden;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-/* ========== Header ========== */
-.header {
-  position: fixed;
-  z-index: 101;
-  height: 5rem;
-  line-height: 1em;
-  width: 100%;
-  text-align: center;
-  top: 2vh;
-}
-
-.name-title {
-  position: fixed;
-  top: 2vh;
-  width: 100%;
-  z-index: 101;
-  font-size: var(--text-font-size);
-  font-weight: var(--medium-font-weight);
-}
-
-/* ========= Menu button ======== */
-.toggle-section {
-  display: flex;
-  justify-content: center;
-}
-
-.menu-button {
-  position: fixed;
-  bottom: 0;
-  font-size: 1.4vw;
-  font-weight: var(--medium-font-weight);
-  color: var(--text-color);
-  padding: 0 20px;
-  cursor: pointer;
-  z-index: 101;
-  line-height: 7vh;
-  outline: 0;
-  border: 0;
-  cursor: pointer;
-  background: none;
-}
-
 main {
   height: 100vh;
-  padding: 20px;
   box-sizing: border-box;
   transition: transform 0.5s ease-in-out;
 }
@@ -106,8 +58,54 @@ a {
   text-decoration: none;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+/* ========== Header ========== */
+.header {
+  position: fixed;
+  z-index: 101;
+  height: 5rem;
+  line-height: 1em;
+  width: 100vw;
+  top: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.name-title {
+  z-index: 101;
+  font-size: var(--text-font-size);
+  font-weight: 600;
+}
+
+/* ========= Menu button ======== */
+.toggle-section {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-button {
+  position: fixed;
+  bottom: 0;
+  font-size: 1.4vw;
+  font-weight: var(--medium-font-weight);
+  color: var(--text-color);
+  cursor: pointer;
+  z-index: 101;
+  line-height: 7vh;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background: none;
+}
+
+/* Navigation list */
 .nav-list {
-  margin-top: 4rem;
+  margin-top: 6rem;
   font-size: 8vw;
   font-weight: 600;
   display: flex;
@@ -121,6 +119,7 @@ a {
   transition: 0.7s;
 }
 
+/* Contact information */
 .contact-info {
   display: flex;
   flex-direction: row;

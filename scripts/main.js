@@ -4,6 +4,7 @@ const toggleNav = document.getElementById("toggleNav");
 const nav = document.getElementById("nav");
 const main = document.getElementById("main");
 
+// Navigation toggle button
 toggleNav.addEventListener("click", () => {
   nav.classList.toggle("hidden");
   nav.classList.toggle("shown");
@@ -13,7 +14,16 @@ toggleNav.addEventListener("click", () => {
   } else toggleNav.innerText = "Menu";
 });
 
-// Page navigation
+// Navigation closing on pressing the escape key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && !nav.classList.contains("hidden")) {
+    nav.classList.toggle("hidden");
+    nav.classList.toggle("shown");
+    toggleNav.innerText = "Menu";
+  }
+});
+
+// Navigation list hover effect
 const handleHover = function (e) {
   if (e.target.classList.contains("nav-link")) {
     const link = e.target;
@@ -28,5 +38,4 @@ const handleHover = function (e) {
 
 // Passing "argument" into handler
 nav.addEventListener("mouseover", handleHover.bind(0.5));
-
 nav.addEventListener("mouseout", handleHover.bind(1));
