@@ -2,12 +2,13 @@
 
 const toggleButton = document.querySelector(".menu-button");
 const nav = document.getElementById("nav");
+const navLinks = Array.from(document.querySelectorAll(".nav-link"));
+const hiddenImages = document.querySelectorAll(".hidden");
 
 // Navigation toggle button
 toggleButton.addEventListener("click", function () {
-  nav.classList.toggle("hidden");
+  nav.classList.toggle("active");
 
-  // Menu button changing its text
   if (toggleNav.innerText === "Menu") {
     toggleNav.innerText = "Close Menu";
   } else toggleNav.innerText = "Menu";
@@ -33,7 +34,27 @@ const handleHover = function (e) {
     });
   }
 };
-
 // Passing "argument" into handler
 nav.addEventListener("mouseover", handleHover.bind(0.5));
 nav.addEventListener("mouseout", handleHover.bind(1));
+
+// Images appearing on hovering each of the navigation list options
+nav.addEventListener("mouseover", function (event) {
+  if (event.target.matches(".nav-link")) {
+    hiddenImages.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.remove("hidden");
+      }, 150 * index);
+    });
+  }
+});
+
+nav.addEventListener("mouseout", function (event) {
+  if (event.target.matches(".nav-link")) {
+    hiddenImages.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.add("hidden");
+      }, 150 * index);
+    });
+  }
+});
