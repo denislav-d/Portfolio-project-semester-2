@@ -24,18 +24,13 @@ body {
   color: var(--text-color);
   font-family: var(--body-font);
   background-color: var(--body-color);
-  /* overflow: hidden; */
 }
 
-/* main {
-  transition: transform 0.5s ease-in-out;
-} */
-
-nav {
+#nav {
   background-color: var(--body-color);
   color: var(--text-color);
   width: 100%;
-  transition: bottom 0.5s ease-in-out;
+  transition: all 0.5s ease-out;
 }
 
 a {

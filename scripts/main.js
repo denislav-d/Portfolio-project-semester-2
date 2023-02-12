@@ -1,11 +1,11 @@
 "use strict";
 
 const toggleButton = document.querySelector(".menu-button");
-const toggleSection = document.getElementById("nav");
+const nav = document.getElementById("nav");
 
 // Navigation toggle button
 toggleButton.addEventListener("click", function () {
-  toggleSection.classList.toggle("hidden");
+  nav.classList.toggle("hidden");
 
   // Menu button changing its text
   if (toggleNav.innerText === "Menu") {
