@@ -45,9 +45,25 @@ a {
   text-decoration: none;
 }
 
+.main {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.content-section {
+  height: 100vh;
+  font-size: var(--title-font-size);
+  scroll-snap-align: start;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='none' d='M0 0h24v24H0V0z'/><path d='M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z'/></svg>")
+      8 8,
+    auto;
+}
+
 /* ========== Header ========== */
 .header {
-  position: relative;
+  position: fixed;
+  z-index: 100;
   height: 5rem;
   line-height: 1em;
   width: 100%;
@@ -120,15 +136,11 @@ a {
 }
 
 .hidden {
-  display: hidden;
+  visibility: hidden;
   opacity: 0;
 }
 
-/* .hidden-images {
-  transition: opacity 400ms, transform 400ms;
-} */
-
-.hidden-img-1 {
+.hidden-img-4 {
   z-index: 1;
   position: absolute;
   top: 13vh;
@@ -156,7 +168,7 @@ a {
   transition: 0.5s;
 }
 
-.hidden-img-4 {
+.hidden-img-1 {
   position: absolute;
   top: 42vh;
   left: 4vw;

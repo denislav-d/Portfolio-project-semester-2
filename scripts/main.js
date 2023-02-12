@@ -2,8 +2,6 @@
 
 const toggleButton = document.querySelector(".menu-button");
 const nav = document.getElementById("nav");
-const navLinks = Array.from(document.querySelectorAll(".nav-link"));
-const hiddenImages = document.querySelectorAll(".hidden");
 
 // Navigation toggle button
 toggleButton.addEventListener("click", function () {
@@ -39,6 +37,8 @@ nav.addEventListener("mouseover", handleHover.bind(0.5));
 nav.addEventListener("mouseout", handleHover.bind(1));
 
 // Images appearing on hovering each of the navigation list options
+const hiddenImages = document.querySelectorAll(".hidden");
+
 nav.addEventListener("mouseover", function (event) {
   if (event.target.matches(".nav-link")) {
     hiddenImages.forEach((el, index) => {
@@ -58,3 +58,20 @@ nav.addEventListener("mouseout", function (event) {
     });
   }
 });
+
+// Click anywhere on the current section to go to next section and smooth scrolling
+const sections = document.querySelectorAll(".content-section");
+let currentSectionIndex = 0;
+
+sections.forEach((section, index) => {
+  section.addEventListener("click", function () {
+    currentSectionIndex = index;
+    scrollToNextSection();
+  });
+});
+
+function scrollToNextSection() {
+  if (currentSectionIndex >= sections.length - 1) return;
+  currentSectionIndex++;
+  sections[currentSectionIndex].scrollIntoView({ behavior: "smooth" });
+}
