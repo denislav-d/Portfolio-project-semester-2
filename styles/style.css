@@ -24,33 +24,18 @@ body {
   color: var(--text-color);
   font-family: var(--body-font);
   background-color: var(--body-color);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
-main {
-  height: 100vh;
-  box-sizing: border-box;
+/* main {
   transition: transform 0.5s ease-in-out;
-}
+} */
 
 nav {
-  height: 100vh;
   background-color: var(--body-color);
   color: var(--text-color);
-  padding: 20px;
-  box-sizing: border-box;
-  position: absolute;
-  bottom: -100vh;
   width: 100%;
   transition: bottom 0.5s ease-in-out;
-}
-
-nav.hidden {
-  bottom: -100vh;
-}
-
-nav.shown {
-  bottom: 0;
 }
 
 a {
@@ -58,11 +43,6 @@ a {
   text-decoration: none;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
 /* ========== Header ========== */
 .header {
   position: fixed;
@@ -83,7 +63,7 @@ a {
 }
 
 /* ========= Menu button ======== */
-.toggle-section {
+.button-section {
   display: flex;
   justify-content: center;
 }
@@ -137,4 +117,9 @@ a {
   flex-direction: column;
   list-style: none;
   width: 25vw;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
 }

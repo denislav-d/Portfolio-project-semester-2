@@ -1,14 +1,13 @@
 "use strict";
 
-const toggleNav = document.getElementById("toggleNav");
-const nav = document.getElementById("nav");
-const main = document.getElementById("main");
+const toggleButton = document.querySelector(".menu-button");
+const toggleSection = document.getElementById("nav");
 
 // Navigation toggle button
-toggleNav.addEventListener("click", () => {
-  nav.classList.toggle("hidden");
-  nav.classList.toggle("shown");
+toggleButton.addEventListener("click", function () {
+  toggleSection.classList.toggle("hidden");
 
+  // Menu button changing its text
   if (toggleNav.innerText === "Menu") {
     toggleNav.innerText = "Close Menu";
   } else toggleNav.innerText = "Menu";
@@ -18,7 +17,6 @@ toggleNav.addEventListener("click", () => {
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && !nav.classList.contains("hidden")) {
     nav.classList.toggle("hidden");
-    nav.classList.toggle("shown");
     toggleNav.innerText = "Menu";
   }
 });
