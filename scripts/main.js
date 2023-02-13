@@ -37,23 +37,65 @@ nav.addEventListener("mouseover", handleHover.bind(0.5));
 nav.addEventListener("mouseout", handleHover.bind(1));
 
 // Images appearing on hovering each of the navigation list options
-const hiddenImages = document.querySelectorAll(".hidden");
+const hiddenImagesAbout = document.querySelectorAll(".hidden-about");
+const hiddenImagesProjects = document.querySelectorAll(".hidden-projects");
+const hiddenImagesOutcomes = document.querySelectorAll(".hidden-outcomes");
 
 nav.addEventListener("mouseover", function (event) {
-  if (event.target.matches(".nav-link")) {
-    hiddenImages.forEach((el, index) => {
+  if (event.target.matches(".about-link")) {
+    hiddenImagesAbout.forEach((el, index) => {
       setTimeout(() => {
-        el.classList.remove("hidden");
+        el.classList.remove("hidden-about");
       }, 150 * index);
     });
   }
 });
 
 nav.addEventListener("mouseout", function (event) {
-  if (event.target.matches(".nav-link")) {
-    hiddenImages.forEach((el, index) => {
+  if (event.target.matches(".about-link")) {
+    hiddenImagesAbout.forEach((el, index) => {
       setTimeout(() => {
-        el.classList.add("hidden");
+        el.classList.add("hidden-about");
+      }, 150 * index);
+    });
+  }
+});
+
+nav.addEventListener("mouseover", function (event) {
+  if (event.target.matches(".projects-link")) {
+    hiddenImagesProjects.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.remove("hidden-projects");
+      }, 150 * index);
+    });
+  }
+});
+
+nav.addEventListener("mouseout", function (event) {
+  if (event.target.matches(".projects-link")) {
+    hiddenImagesProjects.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.add("hidden-projects");
+      }, 150 * index);
+    });
+  }
+});
+
+nav.addEventListener("mouseover", function (event) {
+  if (event.target.matches(".outcomes-link")) {
+    hiddenImagesOutcomes.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.remove("hidden-outcomes");
+      }, 150 * index);
+    });
+  }
+});
+
+nav.addEventListener("mouseout", function (event) {
+  if (event.target.matches(".outcomes-link")) {
+    hiddenImagesOutcomes.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.add("hidden-outcomes");
       }, 150 * index);
     });
   }

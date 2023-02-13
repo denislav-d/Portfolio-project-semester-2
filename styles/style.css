@@ -135,44 +135,54 @@ a {
   width: 25vw;
 }
 
-.hidden {
+.hidden-about,
+.hidden-projects,
+.hidden-outcomes {
   visibility: hidden;
   opacity: 0;
 }
 
-.hidden-img-4 {
+.hidden-img-1,
+.hidden-img-5,
+.hidden-img-10 {
+  position: absolute;
+  top: 42vh;
+  left: 4vw;
+  width: 16vw;
+  height: 37vh;
+  transition: 0.4s;
+}
+
+.hidden-img-2,
+.hidden-img-8,
+.hidden-img-12 {
+  position: absolute;
+  top: 13vh;
+  right: 4vw;
+  width: 25vw;
+  height: 24vh;
+  transition: 0.4s;
+}
+
+.hidden-img-3,
+.hidden-img-7,
+.hidden-img-11 {
+  position: absolute;
+  top: 56vh;
+  right: 12vw;
+  width: 12vw;
+  height: 30vh;
+  transition: 0.4s;
+}
+
+.hidden-img-4,
+.hidden-img-6,
+.hidden-img-9 {
   z-index: 1;
   position: absolute;
   top: 13vh;
   left: 16vw;
   width: 16vw;
   height: 35vh;
-  transition: 0.5s;
-}
-
-.hidden-img-2 {
-  position: absolute;
-  top: 13vh;
-  right: 4vw;
-  width: 25vw;
-  height: 24vh;
-  transition: 0.5s;
-}
-
-.hidden-img-3 {
-  position: absolute;
-  top: 56vh;
-  right: 12vw;
-  width: 12vw;
-  height: 30vh;
-  transition: 0.5s;
-}
-
-.hidden-img-1 {
-  position: absolute;
-  top: 42vh;
-  left: 4vw;
-  width: 16vw;
-  height: 37vh;
-  transition: 0.5s;
+  transition: 0.4s;
 }
