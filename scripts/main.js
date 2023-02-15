@@ -6,17 +6,14 @@ const nav = document.getElementById("nav");
 // Navigation toggle button
 toggleButton.addEventListener("click", function () {
   nav.classList.toggle("active");
-
-  if (toggleNav.innerText === "Menu") {
-    toggleNav.innerText = "Close Menu";
-  } else toggleNav.innerText = "Menu";
+  this.innerText = this.innerText === "Menu" ? "Close Menu" : "Menu";
 });
 
 // Navigation closing on pressing the escape key
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && !nav.classList.contains("hidden")) {
-    nav.classList.toggle("hidden");
-    toggleNav.innerText = "Menu";
+  if (e.key === "Escape" && nav.classList.contains("active")) {
+    nav.classList.toggle("active");
+    toggleButton.innerText = "Menu";
   }
 });
 
@@ -48,6 +45,18 @@ nav.addEventListener("mouseover", function (event) {
         el.classList.remove("hidden-about");
       }, 150 * index);
     });
+  } else if (event.target.matches(".projects-link")) {
+    hiddenImagesProjects.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.remove("hidden-projects");
+      }, 150 * index);
+    });
+  } else if (event.target.matches(".outcomes-link")) {
+    hiddenImagesOutcomes.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.remove("hidden-outcomes");
+      }, 150 * index);
+    });
   }
 });
 
@@ -58,41 +67,13 @@ nav.addEventListener("mouseout", function (event) {
         el.classList.add("hidden-about");
       }, 150 * index);
     });
-  }
-});
-
-nav.addEventListener("mouseover", function (event) {
-  if (event.target.matches(".projects-link")) {
-    hiddenImagesProjects.forEach((el, index) => {
-      setTimeout(() => {
-        el.classList.remove("hidden-projects");
-      }, 150 * index);
-    });
-  }
-});
-
-nav.addEventListener("mouseout", function (event) {
-  if (event.target.matches(".projects-link")) {
+  } else if (event.target.matches(".projects-link")) {
     hiddenImagesProjects.forEach((el, index) => {
       setTimeout(() => {
         el.classList.add("hidden-projects");
       }, 150 * index);
     });
-  }
-});
-
-nav.addEventListener("mouseover", function (event) {
-  if (event.target.matches(".outcomes-link")) {
-    hiddenImagesOutcomes.forEach((el, index) => {
-      setTimeout(() => {
-        el.classList.remove("hidden-outcomes");
-      }, 150 * index);
-    });
-  }
-});
-
-nav.addEventListener("mouseout", function (event) {
-  if (event.target.matches(".outcomes-link")) {
+  } else if (event.target.matches(".outcomes-link")) {
     hiddenImagesOutcomes.forEach((el, index) => {
       setTimeout(() => {
         el.classList.add("hidden-outcomes");
