@@ -3,7 +3,7 @@
   /* ========== Colors ========== */
   /*Color mode HSL(hue, saturation, lightness)*/
   --text-color: hsl(0, 0%, 7%);
-  --body-color: hsl(30, 33%, 96%);
+  --body-color: hsl(34, 33%, 96%);
 
   /* ========== Font and typography ========== */
   --body-font: "Red Hat Display", sans-serif;
@@ -135,6 +135,26 @@ a {
   width: 25vw;
 }
 
+/* Underline contact lists animation */
+.contact-item {
+  position: relative;
+}
+
+.contact-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: var(--text-color);
+  transition: width 0.3s ease-in-out;
+}
+
+.contact-item:hover:before {
+  width: 100%;
+}
+
 .hidden-about,
 .hidden-projects,
 .hidden-outcomes {
@@ -142,6 +162,7 @@ a {
   opacity: 0;
 }
 
+/* Hidden images which appear on hovering the navigation menu options */
 /* Botttom left */
 .hidden-img-1 {
   position: absolute;
@@ -172,6 +193,7 @@ a {
 }
 
 /* Top right */
+/* Image landscape mode */
 .hidden-img-2 {
   position: absolute;
   top: 13vh;
@@ -190,6 +212,7 @@ a {
   transition: 0.4s;
 }
 
+/* Image landscape mode */
 .hidden-img-12 {
   position: absolute;
   top: 19vh;
