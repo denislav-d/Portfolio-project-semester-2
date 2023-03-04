@@ -70,8 +70,10 @@ nav.addEventListener("mouseout", function (event) {
   }
 });
 
+// Removed for a while!!!
 // Click anywhere on the current section to go to next section and smooth scrolling
-const sections = document.querySelectorAll(".content-section");
+
+/*const sections = document.querySelectorAll(".content-section");
 let currentSectionIndex = 0;
 
 sections.forEach((section, index) => {
@@ -79,10 +81,38 @@ sections.forEach((section, index) => {
     currentSectionIndex = index;
     scrollToNextSection();
   });
-});
+});*/
 
-function scrollToNextSection() {
-  if (currentSectionIndex >= sections.length - 1) return;
-  currentSectionIndex++;
-  sections[currentSectionIndex].scrollIntoView({ behavior: "smooth" });
-}
+// function scrollToNextSection() {
+//   if (currentSectionIndex >= sections.length - 1) return;
+//   currentSectionIndex++;
+//   sections[currentSectionIndex].scrollIntoView({ behavior: "smooth" });
+// }
+
+// Intro animation
+let intro = document.querySelector(".intro");
+let logo = document.querySelector(".logo-header");
+let logoSpan = document.querySelectorAll(".logo");
+
+window.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    logoSpan.forEach((span, index) => {
+      setTimeout(() => {
+        span.classList.add("active");
+      }, (index + 1) * 400);
+    });
+
+    setTimeout(() => {
+      logoSpan.forEach((span, index) => {
+        setTimeout(() => {
+          span.classList.remove("active");
+          span.classList.add("fade");
+        }, (index + 1) * 50);
+      });
+    }, 2000);
+
+    setTimeout(() => {
+      intro.style.top = "-100vh";
+    }, 2300);
+  });
+});

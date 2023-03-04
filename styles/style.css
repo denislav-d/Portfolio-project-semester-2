@@ -55,15 +55,51 @@ a {
   height: 100vh;
   font-size: var(--title-font-size);
   scroll-snap-align: start;
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='none' d='M0 0h24v24H0V0z'/><path d='M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z'/></svg>")
-      8 8,
-    auto;
+}
+
+/* ========== Intro animation ========== */
+.intro {
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--body-color);
+  transition: 1s;
+}
+
+.logo-header {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text-color);
+}
+
+.logo {
+  font-size: 6rem;
+  position: relative;
+  bottom: -20px;
+  opacity: 0;
+}
+
+.logo.active {
+  bottom: 0;
+  opacity: 1;
+  transition: ease-in-out 0.5s;
+}
+
+.logo.fade {
+  bottom: 150px;
+  opacity: 0;
+  transition: ease-in-out 0.5s;
 }
 
 /* ========== Header ========== */
 .header {
   position: fixed;
-  z-index: 100;
+  z-index: 2;
   height: 5rem;
   line-height: 1em;
   width: 100%;
@@ -91,7 +127,7 @@ a {
   font-weight: var(--medium-font-weight);
   color: var(--text-color);
   cursor: pointer;
-  z-index: 101;
+  z-index: 2;
   line-height: 7vh;
   outline: 0;
   border: 0;
@@ -135,6 +171,10 @@ a {
   width: 25vw;
 }
 
+.social-link {
+  cursor: alias;
+}
+
 /* Underline contact lists animation */
 .contact-item {
   position: relative;
@@ -155,6 +195,7 @@ a {
   width: 100%;
 }
 
+/* Hidden images which appear on hovering the navigation menu options */
 .hidden-about-link,
 .hidden-projects-link,
 .hidden-outcomes-link {
@@ -162,7 +203,6 @@ a {
   opacity: 0;
 }
 
-/* Hidden images which appear on hovering the navigation menu options */
 /* Botttom left */
 .hidden-img-1 {
   position: absolute;

@@ -12,6 +12,13 @@
     <title>Denislav Dimitrov</title>
   </head>
   <body>
+    <!-- Intro animation -->
+    <div class="intro">
+      <h1 class="logo-header">
+        <span class="logo">Denislav</span><span class="logo">Dimitrov</span>
+      </h1>
+    </div>
+    <!-- Main content -->
     <main class="main">
       <header class="header">
         <a href="#" class="name-title">Denislav Dimitrov</a>
@@ -22,7 +29,11 @@
       <section class="content-section">four</section>
       <section class="content-section">five</section>
       <section class="content-section">six</section>
+      <section class="button-section">
+        <button class="menu-button" id="toggleNav">Menu</button>
+      </section>
     </main>
+    <!-- Hidden navigation becoming visible when pressing the Menu button -->
     <nav id="nav">
       <ul class="nav-list">
         <li class="nav-item">
@@ -46,8 +57,9 @@
             <li><a class="contact-item" href="#">+359 123 456 890</a></li>
             <li>
               <a
-                class="contact-item"
+                class="contact-item social-link"
                 href="https://www.instagram.com/dennislav_d/"
+                target="_blank"
                 >Instagram</a
               >
             </li>
@@ -57,12 +69,18 @@
           <ul class="contact-list">
             <li><a class="contact-item" href="#">A Media Design Student</a></li>
             <li>
-              <a class="contact-item" href="www.linkedin.com/in/denislavd"
+              <a
+                class="contact-item social-link"
+                href="https://www.linkedin.com/in/denislavd"
+                target="_blank"
                 >LinkedIn Profile</a
               >
             </li>
             <li>
-              <a class="contact-item" href="https://github.com/denislav-d"
+              <a
+                class="contact-item social-link"
+                href="https://github.com/denislav-d"
+                target="_blank"
                 >GitHub Profile</a
               >
             </li>
@@ -71,6 +89,7 @@
       </section>
     </nav>
 
+    <!-- Hidden images appearing on nav-link hover -->
     <div id="hidden-pics" class="hidden-images">
       <img
         src="../images/image4.jpg"
@@ -133,9 +152,6 @@
         class="hidden-img-12 hidden-outcomes-link"
       />
     </div>
-    <section class="button-section">
-      <button class="menu-button" id="toggleNav">Menu</button>
-    </section>
     <script src="../scripts/main.js"></script>
   </body>
 </html>
