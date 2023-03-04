@@ -35,49 +35,36 @@ nav.addEventListener("mouseover", handleHover.bind(0.5));
 nav.addEventListener("mouseout", handleHover.bind(1));
 
 // Images appearing on hovering each of the navigation list options
-const hiddenImagesAbout = document.querySelectorAll(".hidden-about");
-const hiddenImagesProjects = document.querySelectorAll(".hidden-projects");
-const hiddenImagesOutcomes = document.querySelectorAll(".hidden-outcomes");
+const hiddenImages = {
+  "about-link": document.querySelectorAll(".hidden-about-link"),
+  "projects-link": document.querySelectorAll(".hidden-projects-link"),
+  "outcomes-link": document.querySelectorAll(".hidden-outcomes-link"),
+};
 
 nav.addEventListener("mouseover", function (event) {
-  if (event.target.matches(".about-link")) {
-    hiddenImagesAbout.forEach((el, index) => {
+  const target = event.target;
+  const targetClass = target.classList[1];
+  const images = hiddenImages[targetClass];
+  console.log(targetClass);
+
+  if (images) {
+    images.forEach((el, index) => {
       setTimeout(() => {
-        el.classList.remove("hidden-about");
-      }, 150 * index);
-    });
-  } else if (event.target.matches(".projects-link")) {
-    hiddenImagesProjects.forEach((el, index) => {
-      setTimeout(() => {
-        el.classList.remove("hidden-projects");
-      }, 150 * index);
-    });
-  } else if (event.target.matches(".outcomes-link")) {
-    hiddenImagesOutcomes.forEach((el, index) => {
-      setTimeout(() => {
-        el.classList.remove("hidden-outcomes");
+        el.classList.remove(`hidden-${targetClass}`);
       }, 150 * index);
     });
   }
 });
 
 nav.addEventListener("mouseout", function (event) {
-  if (event.target.matches(".about-link")) {
-    hiddenImagesAbout.forEach((el, index) => {
+  const target = event.target;
+  const targetClass = target.classList[1];
+  const images = hiddenImages[targetClass];
+
+  if (images) {
+    images.forEach((el, index) => {
       setTimeout(() => {
-        el.classList.add("hidden-about");
-      }, 150 * index);
-    });
-  } else if (event.target.matches(".projects-link")) {
-    hiddenImagesProjects.forEach((el, index) => {
-      setTimeout(() => {
-        el.classList.add("hidden-projects");
-      }, 150 * index);
-    });
-  } else if (event.target.matches(".outcomes-link")) {
-    hiddenImagesOutcomes.forEach((el, index) => {
-      setTimeout(() => {
-        el.classList.add("hidden-outcomes");
+        el.classList.add(`hidden-${targetClass}`);
       }, 150 * index);
     });
   }
