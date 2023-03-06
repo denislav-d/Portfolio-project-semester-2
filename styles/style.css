@@ -188,7 +188,7 @@ a {
   width: 0;
   height: 2px;
   background-color: var(--text-color);
-  transition: width 0.3s ease-in-out;
+  transition: width 0.4s ease-in-out;
 }
 
 .contact-item:hover:before {
