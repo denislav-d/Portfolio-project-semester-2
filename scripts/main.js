@@ -70,6 +70,26 @@ nav.addEventListener("mouseout", function (event) {
   }
 });
 
+// Appear on scroll
+const observer = new IntersectionObserver(
+  function (entries) {
+    entries.forEach(function (entry) {
+      const el = entry.target;
+      if (entry.isIntersecting) {
+        el.classList.add("animate");
+        return;
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+document.querySelectorAll(".animation").forEach(function (i) {
+  if (i) {
+    observer.observe(i);
+  }
+});
+
 // Intro animation
 let intro = document.querySelector(".intro");
 let logo = document.querySelector(".intro-header");

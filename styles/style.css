@@ -47,14 +47,14 @@ a {
 
 .main {
   height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+  /* overflow-y: scroll;
+  scroll-snap-type: y mandatory; */
 }
 
 .content-section {
   height: 100vh;
   font-size: var(--title-font-size);
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
 }
 
 /* ========== Intro animation ========== */
@@ -112,6 +112,10 @@ a {
 .name-title {
   font-size: var(--text-font-size);
   font-weight: var(--medium-font-weight);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 10px;
+  border-radius: 8px;
 }
 
 /* ========= Menu button ======== */
@@ -193,6 +197,88 @@ a {
 
 .contact-item:hover:before {
   width: 100%;
+}
+
+/* Sections */
+.introduction {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+.secondary-text {
+  max-width: 80vmin;
+  font-size: var(--text-font-size);
+}
+
+.intro-img {
+  height: 45vmin;
+  width: 35vmin;
+}
+
+/* Scrolling animations */
+.fade {
+  opacity: 0;
+  transition: 1500ms all ease-in-out;
+}
+
+.animate {
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .fade-left-desktop,
+  .fade-right-desktop {
+    opacity: 0;
+    transition: 1500ms all ease-in-out;
+  }
+  .fade-left-desktop {
+    transform: translateX(100px);
+  }
+  .fade-right-desktop {
+    transform: translateX(-100px);
+  }
+  .fade-left-desktop.animate,
+  .fade-right-desktop.animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .fade-down-mobile,
+  .fade-up-mobile {
+    opacity: 0;
+    transition: 1500ms all ease-in-out;
+  }
+  .fade-up-mobile {
+    transform: translateY(100px);
+  }
+  .fade-down-mobile {
+    transform: translateY(-100px);
+  }
+  .fade-down-mobile.animate,
+  .fade-up-mobile.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .introduction {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
 /* Hidden images which appear on hovering the navigation menu options */
