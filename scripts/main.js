@@ -70,49 +70,10 @@ nav.addEventListener("mouseout", function (event) {
   }
 });
 
-// Removed for a while!!!
-// Clicking on the top half of the screen leading to previous section and clicking on the bottom half of the screen leading to next section with different cursors
-// const sections = document.querySelectorAll(".content-section");
-// let currentSectionIndex = 0;
-
-// sections.forEach((section, index) => {
-//   section.addEventListener("click", function (event) {
-//     if (event.clientY <= window.innerHeight / 2) {
-//       // Clicked on top half of the screen
-//       scrollToPreviousSection();
-//     } else {
-//       // Clicked on bottom half of the screen
-//       scrollToNextSection();
-//     }
-//   });
-
-//   section.addEventListener("mousemove", function (event) {
-//     if (event.clientY <= window.innerHeight / 2) {
-//       // Cursor for top half of the screen
-//       section.style.cursor = "n-resize";
-//     } else {
-//       // Cursor for bottom half of the screen
-//       section.style.cursor = "s-resize";
-//     }
-//   });
-// });
-
-// function scrollToNextSection() {
-//   if (currentSectionIndex >= sections.length - 1) return;
-//   currentSectionIndex++;
-//   sections[currentSectionIndex].scrollIntoView({ behavior: "smooth" });
-// }
-
-// function scrollToPreviousSection() {
-//   if (currentSectionIndex <= 0) return;
-//   currentSectionIndex--;
-//   sections[currentSectionIndex].scrollIntoView({ behavior: "smooth" });
-// }
-
 // Intro animation
 let intro = document.querySelector(".intro");
-let logo = document.querySelector(".logo-header");
-let logoSpan = document.querySelectorAll(".logo");
+let logo = document.querySelector(".intro-header");
+let logoSpan = document.querySelectorAll(".intro-span");
 
 window.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {

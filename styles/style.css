@@ -69,7 +69,7 @@ a {
   transition: 1s;
 }
 
-.logo-header {
+.intro-header {
   position: absolute;
   top: 45%;
   left: 50%;
@@ -77,20 +77,20 @@ a {
   color: var(--text-color);
 }
 
-.logo {
+.intro-span {
   font-size: 6rem;
   position: relative;
   bottom: -20px;
   opacity: 0;
 }
 
-.logo.active {
+.intro-span.active {
   bottom: 0;
   opacity: 1;
   transition: ease-in-out 0.5s;
 }
 
-.logo.fade {
+.intro-span.fade {
   bottom: 150px;
   opacity: 0;
   transition: ease-in-out 0.5s;
