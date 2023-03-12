@@ -71,6 +71,7 @@ nav.addEventListener("mouseout", function (event) {
 });
 
 // Appear on scroll
+
 const observer = new IntersectionObserver(
   function (entries) {
     entries.forEach(function (entry) {
