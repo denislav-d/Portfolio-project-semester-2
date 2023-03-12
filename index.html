@@ -8,16 +8,18 @@
       href="https://fonts.googleapis.com/css?family=Red Hat Display"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>Denislav Dimitrov</title>
   </head>
   <body>
     <!-- Main content -->
     <main class="main">
-      <header class="header">
+      <header class="header flex-center">
         <a href="#" class="name-title">Denislav Dimitrov</a>
       </header>
-      <section class="content-section">landing</section>
+
+      <!-- Sections -->
+      <!-- <section class="content-section">landing</section>
       <section class="content-section">
         <article
           class="introduction fade-right-desktop fade-up-mobile animation"
@@ -42,8 +44,75 @@
         </article>
       </section>
       <section class="content-section">five</section>
-      <section class="content-section">six</section>
-      <section class="button-section">
+      <section class="content-section">six</section> -->
+      <section class="landing section" id="landing"></section>
+      <section class="introduction section" id="introduction">
+        <div class="container">
+          <article class="flex-column fade-down-desktop animation">
+            <h3>Introduction</h3>
+            <p class="secondary-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+              fugiat inventore ad maxime porro dolor, impedit, nihil est quaerat
+              <br /><br />
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatem nesciunt laborum aspernatur esse, odit doloribus facere
+              accusamus ab, magni nulla cupiditate animi velit enim asperiores
+              repellat sit eius a rem.
+            </p>
+          </article>
+          <aside class="aside fade-down-desktop animation">
+            <img
+              src="./images/image1.jpg"
+              alt="personal photo"
+              class="personal-img"
+            />
+          </aside>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <aside class="aside fade-up-desktop animation">
+            <img
+              src="./images/media-production.png"
+              alt=""
+              class="macbook-img"
+            />
+          </aside>
+          <article class="flex-column fade-up-desktop animation">
+            <h3>Media Production</h3>
+            <p class="secondary-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+              fugiat inventore ad maxime porro dolor, impedit, nihil est quaerat
+              <br /><br />
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatem nesciunt laborum aspernatur esse, odit doloribus facere
+              accusamus ab, magni nulla cupiditate animi velit enim asperiores
+              repellat sit eius a rem.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <article class="flex-column fade-right-desktop animation">
+            <h3>Web Development</h3>
+            <p class="secondary-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+              fugiat inventore ad maxime porro dolor, impedit, nihil est quaerat
+              <br /><br />
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatem nesciunt laborum aspernatur esse, odit doloribus facere
+              accusamus ab, magni nulla cupiditate animi velit enim asperiores
+              repellat sit eius a rem.
+            </p>
+          </article>
+          <aside class="aside fade-left-desktop animation">
+            <img src="./images/webdev.png" alt="" class="iphone-img" />
+          </aside>
+        </div>
+      </section>
+      <!-- Menu button -->
+      <section class="flex-center">
         <button class="menu-button" id="toggleNav">Menu</button>
       </section>
     </main>
@@ -60,7 +129,7 @@
           <a class="nav-link outcomes-link" href="#">Outcomes</a>
         </li>
       </ul>
-      <section class="contact-info">
+      <section class="contact-info flex-center">
         <div class="contact-column-1">
           <ul class="contact-list">
             <li>
@@ -103,71 +172,71 @@
           </ul>
         </div>
       </section>
+      <!-- Hidden images appearing on nav-link hover -->
+      <div id="hidden-pics" class="hidden-images">
+        <img
+          src="../images/image4.jpg"
+          alt="hidden image"
+          class="hidden-img-4 hidden-about-link"
+        />
+        <img
+          src="../images/image3.jpg"
+          alt="hidden image"
+          class="hidden-img-3 hidden-about-link"
+        />
+        <img
+          src="../images/image1.jpg"
+          alt="hidden image"
+          class="hidden-img-1 hidden-about-link"
+        />
+        <img
+          src="../images/image2.jpg"
+          alt="hidden image"
+          class="hidden-img-2 hidden-about-link"
+        />
+        <img
+          src="../images/image5.jpg"
+          alt="hidden image"
+          class="hidden-img-5 hidden-projects-link"
+        />
+        <img
+          src="../images/image6.jpg"
+          alt="hidden image"
+          class="hidden-img-6 hidden-projects-link"
+        />
+        <img
+          src="../images/image7.jpg"
+          alt="hidden image"
+          class="hidden-img-7 hidden-projects-link"
+        />
+        <img
+          src="../images/image8.jpg"
+          alt="hidden image"
+          class="hidden-img-8 hidden-projects-link"
+        />
+        <img
+          src="../images/image9.jpg"
+          alt="hidden image"
+          class="hidden-img-9 hidden-outcomes-link"
+        />
+        <img
+          src="../images/image10.jpg"
+          alt="hidden image"
+          class="hidden-img-10 hidden-outcomes-link"
+        />
+        <img
+          src="../images/image11.jpg"
+          alt="hidden image"
+          class="hidden-img-11 hidden-outcomes-link"
+        />
+        <img
+          src="../images/image12.jpg"
+          alt="hidden image"
+          class="hidden-img-12 hidden-outcomes-link"
+        />
+      </div>
     </nav>
 
-    <!-- Hidden images appearing on nav-link hover -->
-    <div id="hidden-pics" class="hidden-images">
-      <img
-        src="../images/image4.jpg"
-        alt="hidden image"
-        class="hidden-img-4 hidden-about-link"
-      />
-      <img
-        src="../images/image3.jpg"
-        alt="hidden image"
-        class="hidden-img-3 hidden-about-link"
-      />
-      <img
-        src="../images/image1.jpg"
-        alt="hidden image"
-        class="hidden-img-1 hidden-about-link"
-      />
-      <img
-        src="../images/image2.jpg"
-        alt="hidden image"
-        class="hidden-img-2 hidden-about-link"
-      />
-      <img
-        src="../images/image5.jpg"
-        alt="hidden image"
-        class="hidden-img-5 hidden-projects-link"
-      />
-      <img
-        src="../images/image6.jpg"
-        alt="hidden image"
-        class="hidden-img-6 hidden-projects-link"
-      />
-      <img
-        src="../images/image7.jpg"
-        alt="hidden image"
-        class="hidden-img-7 hidden-projects-link"
-      />
-      <img
-        src="../images/image8.jpg"
-        alt="hidden image"
-        class="hidden-img-8 hidden-projects-link"
-      />
-      <img
-        src="../images/image9.jpg"
-        alt="hidden image"
-        class="hidden-img-9 hidden-outcomes-link"
-      />
-      <img
-        src="../images/image10.jpg"
-        alt="hidden image"
-        class="hidden-img-10 hidden-outcomes-link"
-      />
-      <img
-        src="../images/image11.jpg"
-        alt="hidden image"
-        class="hidden-img-11 hidden-outcomes-link"
-      />
-      <img
-        src="../images/image12.jpg"
-        alt="hidden image"
-        class="hidden-img-12 hidden-outcomes-link"
-      />
-    </div>
     <script src="./scripts/main.js"></script>
   </body>
 </html>
