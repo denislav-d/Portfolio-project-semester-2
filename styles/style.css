@@ -64,7 +64,7 @@ nav.active {
 
 /* ========== Navigation list ========== */
 .nav-list {
-  margin-top: 6rem;
+  margin-top: 7rem;
   font-size: 8vw;
   font-weight: 600;
   display: flex;
@@ -120,7 +120,7 @@ nav.active {
 /* ============= Header =============  */
 .header {
   position: fixed;
-  z-index: 2;
+  z-index: 10;
   height: 5rem;
   line-height: 1em;
   width: 100%;
@@ -153,59 +153,62 @@ nav.active {
 }
 
 /* ============= Sections =============  */
-.section {
-  height: 100vh;
+.section-container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 125px 36px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-.container {
+.content {
+  width: 48%;
+  background-color: #fff;
   display: flex;
-  gap: 5rem;
-  margin-left: 5rem;
-  margin-right: 5rem;
-}
-
-.flex-column {
-  display: flex;
+  justify-content: center;
   flex-direction: column;
-  gap: 1rem;
-  flex: 2;
+  /* gap: 3rem; */
+  padding: 60px;
 }
 
-h3 {
-  font-size: 2.5rem;
+h2 {
+  font-size: 4rem;
+  font-weight: 800;
+  width: 70vmin;
 }
 
-.secondary-text {
-  max-width: 80vmin;
-  font-size: var(--text-font-size);
+.sub-header {
+  margin-bottom: 1.25rem;
 }
 
-.aside {
-  flex: 1;
+.sub-header,
+.content-text {
+  font-size: 1.25rem;
 }
 
-.personal-img {
-  margin-top: -4rem;
-  height: 65vmin;
-  width: 50vmin;
+.content-text {
+  margin-top: 4.6rem;
 }
 
-.macbook-img {
-  width: 60vmin;
+.btn {
+  margin-top: 5.6rem;
 }
 
-.iphone-img {
-  margin-top: -10rem;
-  transform: translate(20%);
-  width: 80vmin;
+.content-media {
+  z-index: 2;
+  width: 52%;
+  display: flex;
+  align-items: center;
+
+  background-color: aquamarine;
 }
 
-@media (max-width: 767px) {
-  .container {
-    flex-direction: column;
-  }
+.content-media a img {
+  max-height: 52rem;
 }
-
 /* ============= Appear on scroll animations =============  */
 .fade {
   opacity: 0;
