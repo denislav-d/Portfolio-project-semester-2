@@ -170,7 +170,6 @@ nav.active {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  /* gap: 3rem; */
   padding: 60px;
 }
 
@@ -193,12 +192,26 @@ h2 {
   margin-top: 4.6rem;
 }
 
-.btn {
+.btn-more {
   margin-top: 5.6rem;
+  color: #fff;
+  height: 2.5rem;
+  width: 8rem;
+  background-color: rgba(18, 18, 18, 0.06);
+  border-radius: 0.75rem;
+  color: #121212;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+}
+
+.btn-more:hover {
+  background-color: rgba(18, 18, 18, 0.14);
 }
 
 .content-media {
-  z-index: 2;
   width: 52%;
   display: flex;
   align-items: center;
@@ -210,11 +223,6 @@ h2 {
   max-height: 52rem;
 }
 /* ============= Appear on scroll animations =============  */
-.fade {
-  opacity: 0;
-  transition: 1000ms all ease-in-out;
-}
-
 .animate {
   opacity: 1;
 }
