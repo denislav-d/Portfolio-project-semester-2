@@ -266,9 +266,23 @@ h2 {
 }
 
 .card-image {
+  border-radius: 1.5vw;
+  overflow: hidden;
+}
+
+.card-image img {
   width: 423px;
   max-height: 238px;
-  border-radius: 1.5vw;
+  transition: 0.5s all ease-in-out;
+}
+
+.grid-card:hover img {
+  transform: scale(1.1);
+}
+
+/* ============= Appear on scroll animations =============  */
+.animate {
+  opacity: 1;
 }
 
 .grid-card:nth-child(1),
@@ -282,11 +296,6 @@ h2 {
 .grid-card:nth-child(3),
 .grid-card:nth-child(6) {
   transition-delay: 600ms;
-}
-
-/* ============= Appear on scroll animations =============  */
-.animate {
-  opacity: 1;
 }
 
 @media screen and (min-width: 768px) {
