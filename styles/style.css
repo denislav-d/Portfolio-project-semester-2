@@ -271,6 +271,19 @@ h2 {
   border-radius: 1.5vw;
 }
 
+.grid-card:nth-child(1),
+.grid-card:nth-child(4) {
+  transition-delay: 200ms;
+}
+.grid-card:nth-child(2),
+.grid-card:nth-child(5) {
+  transition-delay: 400ms;
+}
+.grid-card:nth-child(3),
+.grid-card:nth-child(6) {
+  transition-delay: 600ms;
+}
+
 /* ============= Appear on scroll animations =============  */
 .animate {
   opacity: 1;
