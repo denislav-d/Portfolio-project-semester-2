@@ -4,7 +4,7 @@ const toggleButton = document.querySelector(".menu-button");
 const nav = document.getElementById("nav");
 
 // Navigation toggle button
-toggleButton.addEventListener("click", function () {
+toggleButton.addEventListener("click", () => {
   nav.classList.toggle("active");
   this.innerText = this.innerText === "Menu" ? "Close Menu" : "Menu";
 });
