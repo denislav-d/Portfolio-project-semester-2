@@ -8,7 +8,7 @@
   /* ========== Font and typography ========== */
   --body-font: "Red Hat Display", sans-serif;
   --title-font-size: 8vw;
-  --text-font-size: 1.5vw;
+  --text-font-size: 1.5rem;
   --medium-font-weight: 600;
 }
 
@@ -130,21 +130,27 @@ nav.active {
   height: 5rem;
   line-height: 1em;
   width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .name-title {
+  position: absolute;
   font-size: var(--text-font-size);
   font-weight: var(--medium-font-weight);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   padding: 10px;
   border-radius: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* ============= Menu button =============  */
 .menu-button {
   margin-top: 5px;
-  right: 40vw;
+  margin-left: 2rem;
   position: relative;
   color: var(--text-color);
   cursor: pointer;
@@ -384,6 +390,13 @@ h2 {
     transform: translateY(0);
   }
 }
+
+/* ============= Media queries (responsive) =============  */
+/* @media only screen and (max-width: 600px) {
+  .menu-button {
+    right: 8rem;
+  }
+} */
 
 /* ============= Hidden images (nav hover) =============  */
 .hidden-about-link,
