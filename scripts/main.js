@@ -5,15 +5,15 @@ const nav = document.getElementById("nav");
 
 // Navigation toggle button
 toggleButton.addEventListener("click", () => {
+  toggleButton.classList.toggle("active");
   nav.classList.toggle("active");
-  this.innerText = this.innerText === "Menu" ? "Close Menu" : "Menu";
 });
 
 // Navigation closing on pressing the escape key
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && nav.classList.contains("active")) {
+    toggleButton.classList.toggle("active");
     nav.classList.toggle("active");
-    toggleButton.innerText = "Menu";
   }
 });
 
