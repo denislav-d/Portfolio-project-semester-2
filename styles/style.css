@@ -150,7 +150,7 @@ nav.active {
 /* ============= Menu button =============  */
 .menu-button {
   margin-top: 5px;
-  margin-left: 2rem;
+  margin-left: 1rem;
   position: relative;
   color: var(--text-color);
   cursor: pointer;
