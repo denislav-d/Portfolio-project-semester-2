@@ -318,6 +318,8 @@ h2 {
   width: 423px;
   max-height: 238px;
   transition: 0.5s all ease-in-out;
+  object-fit: cover;
+  aspect-ratio: 16/9;
 }
 
 .grid-card:hover img {
