@@ -138,6 +138,7 @@ nav.active {
   position: absolute;
   font-size: var(--text-font-size);
   font-weight: var(--medium-font-weight);
+  /* Blur filter to be visible when on top of content */
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   padding: 10px;
@@ -240,11 +241,11 @@ h2 {
 }
 
 .content-text {
-  margin-top: 4.6rem;
+  margin-top: 4rem;
 }
 
 .btn-more {
-  margin-top: 5.6rem;
+  margin-top: 4.8rem;
   color: #fff;
   height: 2.5rem;
   width: 8rem;
