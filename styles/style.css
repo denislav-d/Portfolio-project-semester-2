@@ -150,7 +150,7 @@ nav.active {
 /* ============= Menu button =============  */
 .menu-button {
   margin-top: 5px;
-  margin-left: 1rem;
+  margin-left: 2rem;
   position: relative;
   color: var(--text-color);
   cursor: pointer;
@@ -298,6 +298,10 @@ h2 {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+.grid-card {
+  cursor: pointer;
+}
+
 .grid-card h4 {
   margin-top: 0.8em;
   font-size: 1.5vw;
@@ -312,6 +316,8 @@ h2 {
 .card-image {
   border-radius: 1.5vw;
   overflow: hidden;
+  width: 423px;
+  max-height: 238px;
 }
 
 .card-image img {
@@ -319,7 +325,6 @@ h2 {
   max-height: 238px;
   transition: 0.5s all ease-in-out;
   object-fit: cover;
-  aspect-ratio: 16/9;
 }
 
 .grid-card:hover img {
