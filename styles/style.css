@@ -145,6 +145,13 @@ nav.active {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.name-title.scroll {
+  opacity: 0;
+  transition: all 0.5s;
 }
 
 /* ============= Menu button =============  */
@@ -260,11 +267,11 @@ h2 {
   display: flex;
   align-items: center;
 
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
 }
 
 .content-media a img {
-  max-height: 52rem;
+  max-height: 48rem;
 }
 
 /* ============= Subjects sections =============  */
