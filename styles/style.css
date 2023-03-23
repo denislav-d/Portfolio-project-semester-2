@@ -303,7 +303,7 @@ h2 {
   padding-left: 4vw;
   display: grid;
   gap: 4vw;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
 }
 
 .grid-card {
@@ -312,12 +312,12 @@ h2 {
 
 .grid-card h4 {
   margin-top: 0.8em;
-  font-size: 1.5vw;
+  font-size: 1.5rem;
 }
 
 .grid-card p {
   margin-top: 0.3em;
-  font-size: 1.25vw;
+  font-size: 1.25rem;
   opacity: 0.5;
 }
 
@@ -337,6 +337,31 @@ h2 {
 
 .grid-card:hover img {
   transform: scale(1.1);
+}
+
+/* Project section */
+.project-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+  justify-content: center;
+  gap: 8vw;
+}
+
+.project-container {
+  margin-top: 6rem;
+  width: 40vw;
+}
+
+.project-container img {
+  width: 34vw;
+  margin-left: 3vw;
+}
+
+.project-container p {
+  margin-top: 2rem;
+  width: 37vw;
+  font-size: var(--text-font-size);
+  opacity: 0.5;
 }
 
 /* ============= Appear on scroll animations =============  */
