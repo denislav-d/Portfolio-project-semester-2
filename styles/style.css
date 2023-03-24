@@ -168,7 +168,7 @@ nav.active {
   transition: all 0.3s;
 }
 
-span {
+.nav-button {
   height: 2px;
   background: var(--text-color);
   width: 18px;
@@ -178,7 +178,7 @@ span {
   transition: all 0.3s;
 }
 
-span::before {
+.nav-button::before {
   content: " ";
   position: absolute;
   display: inline-block;
@@ -190,17 +190,17 @@ span::before {
   top: -2px;
 }
 
-.active span {
+.active .nav-button {
   transform: rotate(45deg);
   width: 24px;
 }
 
-.active span::before {
+.active .nav-button::before {
   top: unset;
   transform: rotate(-90deg);
 }
 
-.active:hover span::before {
+.active:hover .nav-button::before {
   top: unset;
 }
 
@@ -364,6 +364,10 @@ h2 {
 .project-image-smaller {
   width: 28vw;
   margin-left: 6vw;
+}
+
+.project-image-medium {
+  width: 34vw;
 }
 
 .project-image-large {
