@@ -341,14 +341,18 @@ h2 {
 
 /* Project section */
 .project-section {
+  margin-top: 7rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, auto));
   justify-content: center;
   gap: 8vw;
 }
 
+.project-section:last-child {
+  padding-bottom: 6rem;
+}
+
 .project-container {
-  margin-top: 6rem;
   width: 40vw;
 }
 
@@ -356,9 +360,14 @@ h2 {
   width: 34vw;
   margin-left: 3vw;
 }
+
 .project-image-smaller {
   width: 28vw;
-  margin-left: 5vw;
+  margin-left: 6vw;
+}
+
+.project-image-large {
+  width: 40vw;
 }
 
 .project-container p {
@@ -369,7 +378,7 @@ h2 {
 }
 
 .project-container p:last-child {
-  margin-top: 4rem;
+  margin-top: 3rem;
   opacity: 1;
 }
 
