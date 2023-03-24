@@ -459,7 +459,7 @@ h2 {
 /* ============= Hidden images (nav hover) =============  */
 .hidden-about-link,
 .hidden-projects-link,
-.hidden-outcomes-link {
+.hidden-modules-link {
   visibility: hidden;
   opacity: 0;
 }

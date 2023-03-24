@@ -38,7 +38,7 @@ nav.addEventListener("mouseout", handleHover.bind(1));
 const hiddenImages = {
   "about-link": document.querySelectorAll(".hidden-about-link"),
   "projects-link": document.querySelectorAll(".hidden-projects-link"),
-  "outcomes-link": document.querySelectorAll(".hidden-outcomes-link"),
+  "modules-link": document.querySelectorAll(".hidden-modules-link"),
 };
 
 nav.addEventListener("mouseover", function (event) {
