@@ -339,13 +339,13 @@ h2 {
   transform: scale(1.1);
 }
 
-/* Project section */
+/* Project section type 1 */
 .project-section {
   margin-top: 7rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, auto));
   justify-content: center;
-  gap: 8vw;
+  gap: 6vw;
 }
 
 .project-section:last-child {
