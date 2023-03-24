@@ -91,7 +91,6 @@ document.querySelectorAll(".animation").forEach(function (i) {
 });
 
 // Disappearing name title in the header on scroll to not block the content
-
 const nameTitle = document.querySelector(".name-title");
 let prevScrollPos = window.scrollY;
 
