@@ -352,9 +352,13 @@ h2 {
   width: 40vw;
 }
 
-.project-container img {
+.project-image {
   width: 34vw;
   margin-left: 3vw;
+}
+.project-image-smaller {
+  width: 28vw;
+  margin-left: 5vw;
 }
 
 .project-container p {
@@ -362,6 +366,11 @@ h2 {
   width: 37vw;
   font-size: var(--text-font-size);
   opacity: 0.5;
+}
+
+.project-container p:last-child {
+  margin-top: 4rem;
+  opacity: 1;
 }
 
 /* ============= Appear on scroll animations =============  */
