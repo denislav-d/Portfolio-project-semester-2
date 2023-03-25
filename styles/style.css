@@ -32,6 +32,10 @@ body {
   justify-content: center;
 }
 
+p {
+  text-align: justify;
+}
+
 a {
   color: var(--text-color);
   text-decoration: none;
@@ -42,8 +46,8 @@ ul {
 }
 
 .logo {
-  height: 6vmin;
-  width: 6vmin;
+  height: 5rem;
+  width: 5rem;
 }
 
 /* ========== Intro animation ========== */
@@ -69,7 +73,7 @@ ul {
 .intro-span {
   font-size: 6rem;
   position: relative;
-  bottom: -20px;
+  bottom: -30px;
   opacity: 0;
 }
 
@@ -275,12 +279,32 @@ h2 {
 }
 
 .sub-header,
-.content-text {
+.content-text,
+.about-text {
   font-size: 1.25rem;
 }
 
 .content-text {
   margin-top: 4rem;
+}
+
+.about-text {
+  margin-top: 0.5rem;
+}
+
+.about-text p {
+  margin-top: 1.5rem;
+}
+
+.about-text h4 {
+  margin-top: 1.5rem;
+  color: #ff0000;
+  font-size: 1rem;
+}
+
+.about-image {
+  width: 35vw;
+  margin-left: 8vw;
 }
 
 .btn-more {

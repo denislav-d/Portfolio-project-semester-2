@@ -14,6 +14,7 @@ const navLinks = Array.from(document.querySelectorAll(".nav-link"));
 
 navLinks.forEach((link) => {
   link.addEventListener("click", function () {
+    toggleButton.classList.remove("active");
     nav.classList.remove("active");
   });
 });
@@ -122,7 +123,7 @@ window.addEventListener("DOMContentLoaded", () => {
     logoSpan.forEach((span, index) => {
       setTimeout(() => {
         span.classList.add("active");
-      }, (index + 1) * 400);
+      }, (index + 1) * 200);
     });
 
     setTimeout(() => {
@@ -132,10 +133,10 @@ window.addEventListener("DOMContentLoaded", () => {
           span.classList.add("fade");
         }, (index + 1) * 50);
       });
-    }, 2000);
+    }, 1000);
 
     setTimeout(() => {
       intro.style.top = "-100vh";
-    }, 2300);
+    }, 1100);
   });
 });
