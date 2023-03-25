@@ -9,6 +9,15 @@ toggleButton.addEventListener("click", () => {
   nav.classList.toggle("active");
 });
 
+// Close navigation when clicking on each link (had to do this because of anchors on the same page)
+const navLinks = Array.from(document.querySelectorAll(".nav-link"));
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", function () {
+    nav.classList.remove("active");
+  });
+});
+
 // Navigation closing on pressing the escape key
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && nav.classList.contains("active")) {
@@ -101,4 +110,32 @@ window.addEventListener("scroll", function () {
     : nameTitle.classList.add("scroll");
 
   prevScrollPos = currentScrollPos;
+});
+
+// Intro animation
+const intro = document.querySelector(".intro");
+const logo = document.querySelector(".intro-header");
+const logoSpan = document.querySelectorAll(".intro-span");
+
+window.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    logoSpan.forEach((span, index) => {
+      setTimeout(() => {
+        span.classList.add("active");
+      }, (index + 1) * 400);
+    });
+
+    setTimeout(() => {
+      logoSpan.forEach((span, index) => {
+        setTimeout(() => {
+          span.classList.remove("active");
+          span.classList.add("fade");
+        }, (index + 1) * 50);
+      });
+    }, 2000);
+
+    setTimeout(() => {
+      intro.style.top = "-100vh";
+    }, 2300);
+  });
 });
