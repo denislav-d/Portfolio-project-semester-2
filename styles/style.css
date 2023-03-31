@@ -382,6 +382,7 @@ h2 {
   margin-top: 0.3em;
   font-size: 1.25rem;
   opacity: 0.5;
+  max-width: 420px;
 }
 
 .card-image {
