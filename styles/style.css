@@ -256,7 +256,7 @@ nav.active {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-  padding: 125px 36px;
+  padding: 7.8rem 2.25rem;
 
   display: flex;
   flex-direction: row;
@@ -264,7 +264,7 @@ nav.active {
 }
 
 .content {
-  width: 48%;
+  width: 38rem;
   background-color: #fff;
   display: flex;
   justify-content: center;
@@ -334,8 +334,6 @@ h2 {
   width: 52%;
   display: flex;
   align-items: center;
-
-  /* background-color: aquamarine; */
 }
 
 .content-media a img {
@@ -456,6 +454,88 @@ h2 {
 .project-container p:last-child {
   margin-top: 3rem;
   opacity: 1;
+}
+
+/* Responsive design */
+.container {
+  max-width: 1736px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+@media (max-width: 1536px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+    flex-direction: column;
+  }
+  .content-media {
+    display: none;
+  }
+
+  .section-container {
+    padding: 4.8rem 2.25rem;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 640px;
+  }
+  .content-media {
+    display: none;
+  }
+  .menu-button {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    max-width: 475px;
+  }
+  .content {
+    padding: 100px;
+  }
+  .content-media {
+    display: none;
+  }
+  .intro {
+    display: none;
+  }
+  .menu-button {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 475px) {
+  .container {
+    width: 100%;
+  }
+  .content {
+    padding: 100px;
+  }
+  .content-media {
+    display: none;
+  }
+  .intro {
+    display: none;
+  }
+  .menu-button {
+    margin-left: 0.5rem;
+  }
 }
 
 /* ============= Appear on scroll animations =============  */
