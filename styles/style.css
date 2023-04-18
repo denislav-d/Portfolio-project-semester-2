@@ -376,7 +376,9 @@ h2 {
 }
 
 .grid-card {
+  margin-top: 1rem;
   cursor: pointer;
+  max-height: 20rem;
 }
 
 .grid-card h4 {
@@ -394,13 +396,13 @@ h2 {
 .card-image {
   border-radius: 1.5vw;
   overflow: hidden;
-  width: 420px;
-  max-height: 238px;
+  max-width: 420px;
+  height: 238px;
 }
 
 .card-image img {
-  width: 423px;
-  max-height: 238px;
+  width: 420px;
+  height: 238px;
   transition: 0.5s all ease-in-out;
   object-fit: cover;
 }
