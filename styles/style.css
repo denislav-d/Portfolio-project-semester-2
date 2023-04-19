@@ -54,6 +54,10 @@ ul {
   margin-top: 2rem;
 }
 
+.margin-left {
+  margin-left: 2.5rem;
+}
+
 /* ========== Intro animation ========== */
 .intro {
   position: fixed;
