@@ -377,7 +377,7 @@ nav.active {
   padding-left: 4vw;
   display: grid;
   gap: 4vw;
-  grid-template-columns: repeat(auto-fit, minmax(420px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
   justify-content: space-evenly;
   justify-items: center;
   align-content: space-evenly;
