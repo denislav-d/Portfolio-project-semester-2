@@ -26,12 +26,6 @@ body {
   overflow-x: hidden;
 }
 
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 p {
   text-align: justify;
 }
@@ -45,9 +39,17 @@ ul {
   list-style: none;
 }
 
-.logo {
-  height: 5rem;
-  width: 5rem;
+/* Replace in the future */
+h2 {
+  font-size: 4rem;
+  font-weight: 800;
+  width: 70vmin;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .margin-top {
@@ -56,6 +58,15 @@ ul {
 
 .margin-left {
   margin-left: 2.5rem;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.logo {
+  height: 5rem;
+  width: 5rem;
 }
 
 /* ========== Intro animation ========== */
@@ -276,12 +287,6 @@ nav.active {
   padding: 60px;
 }
 
-h2 {
-  font-size: 4rem;
-  font-weight: 800;
-  width: 70vmin;
-}
-
 .sub-header {
   margin-bottom: 1.25rem;
 }
@@ -361,10 +366,6 @@ h2 {
   margin-top: 2rem;
   font-size: 1.5rem;
   max-width: 68ch;
-}
-
-.underline {
-  text-decoration: underline;
 }
 
 .title-subject {
@@ -682,13 +683,6 @@ h2 {
     transform: translateY(0);
   }
 }
-
-/* ============= Media queries (responsive) =============  */
-/* @media only screen and (max-width: 600px) {
-  .menu-button {
-    right: 8rem;
-  }
-} */
 
 /* ============= Hidden images (nav hover) =============  */
 .hidden-about-link,
