@@ -459,6 +459,12 @@ nav.active {
   width: 44vw;
 }
 
+.rotated-gif {
+  margin-left: 10rem;
+  width: 18.5vw;
+  transform: rotate(-90deg);
+}
+
 .project-container p {
   margin-top: 2rem;
   width: 37vw;
