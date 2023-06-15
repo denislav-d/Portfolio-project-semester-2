@@ -465,6 +465,10 @@ nav.active {
   transform: rotate(-90deg);
 }
 
+.interview-video {
+  margin-top: 5rem;
+}
+
 .project-container p {
   margin-top: 2rem;
   width: 37vw;
